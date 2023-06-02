@@ -1,0 +1,8 @@
+# Make sure to check the documentation at https://goreleaser.com
+---
+before:
+  hooks:
+    - go mod tidy
+builds:
+  - targets:
+      - linux_amd64
