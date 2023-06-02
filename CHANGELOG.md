@@ -1,3 +1,20 @@
+# [2.0.0](https://github.com/Zebradil/go-ci-test/compare/v1.2.2...v2.0.0) (2023-06-02)
+
+
+### Bug Fixes
+
+* **ci:** Use correct release notes output variable ([aa21218](https://github.com/Zebradil/go-ci-test/commit/aa21218123f1eddd393c65fb85b1602c014bb6a5))
+
+
+### Code Refactoring
+
+* **ci:** Changing things (and testing release notes) ([09c35f1](https://github.com/Zebradil/go-ci-test/commit/09c35f11bcce0e59acc11ab3591e121568d5e3e3))
+
+
+### BREAKING CHANGES
+
+* **ci:** this is just a test
+
 ## [1.2.2](https://github.com/Zebradil/go-ci-test/compare/v1.2.1...v1.2.2) (2023-06-02)
 
 
