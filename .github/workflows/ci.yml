@@ -31,7 +31,7 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
-          echo "${{ steps.semantic_release.outputs.notes }}" > /tmp/release-notes.md
+          echo "${{ steps.semantic_release.outputs.new_release_notes }}" > /tmp/release-notes.md
           echo "== Release notes =="
           cat /tmp/release-notes.md
           echo "==   End notes   =="
