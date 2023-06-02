@@ -1,3 +1,15 @@
+## [1.2.2](https://github.com/Zebradil/go-ci-test/compare/v1.2.1...v1.2.2) (2023-06-02)
+
+
+### Bug Fixes
+
+* **ci:** Use correct release notes output variable ([b087ca4](https://github.com/Zebradil/go-ci-test/commit/b087ca44bf9a065f830b043176443eebedc3662f))
+
+
+### Performance Improvements
+
+* **ci:** Skip downloading goreleaser ([a960cff](https://github.com/Zebradil/go-ci-test/commit/a960cff62981fc76e984705047f48beb01c29ff0))
+
 ## [1.2.1](https://github.com/Zebradil/go-ci-test/compare/v1.2.0...v1.2.1) (2023-06-02)
 
 
