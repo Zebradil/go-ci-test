@@ -26,6 +26,7 @@ jobs:
         with:
           install-only: true
       - name: Publish release
+        if: steps.semantic_release.outputs.new_release_published == 'true'
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
