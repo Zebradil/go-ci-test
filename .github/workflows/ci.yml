@@ -14,7 +14,7 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v3
       - name: Semantic Release
-        id: semantic_release
+        id: semantic
         uses: cycjimmy/semantic-release-action@v3
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
@@ -27,12 +27,9 @@ jobs:
         with:
           install-only: true
       - name: Publish release
-        if: steps.semantic_release.outputs.new_release_published == 'true'
+        if: steps.semantic.outputs.new_release_published == 'true'
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
-          echo "${{ steps.semantic_release.outputs.new_release_notes }}" > /tmp/release-notes.md
-          echo "== Release notes =="
-          cat /tmp/release-notes.md
-          echo "==   End notes   =="
-          goreleaser release --release-notes /tmp/release-notes.md --clean
+          goreleaser release --clean \
+            --release-notes <(echo "${{ steps.semantic.outputs.new_release_notes }}")
