@@ -30,4 +30,7 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           echo "${{ steps.semantic_release.outputs.notes }}" > /tmp/release-notes.md
+          echo "== Release notes =="
+          cat /tmp/release-notes.md
+          echo "==   End notes   =="
           goreleaser release --release-notes /tmp/release-notes.md --clean
