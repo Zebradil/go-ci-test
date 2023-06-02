@@ -21,6 +21,13 @@ jobs:
         with:
           extra_plugins: |
             @semantic-release/git
+      - name: Debug Semantic Release
+        run: |
+          echo ${{ steps.semantic.outputs.new_release_published }}
+          echo ${{ steps.semantic.outputs.new_release_version }}
+          echo ${{ steps.semantic.outputs.new_release_major_version }}
+          echo ${{ steps.semantic.outputs.new_release_minor_version }}
+          echo ${{ steps.semantic.outputs.new_release_patch_version }}
       - name: Install GoReleaser
         if: steps.semantic_release.outputs.new_release_published == 'true'
         uses: goreleaser/goreleaser-action@v4
