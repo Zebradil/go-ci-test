@@ -22,6 +22,7 @@ jobs:
           extra_plugins: |
             @semantic-release/git
       - name: Install GoReleaser
+        if: steps.semantic_release.outputs.new_release_published == 'true'
         uses: goreleaser/goreleaser-action@v4
         with:
           install-only: true
